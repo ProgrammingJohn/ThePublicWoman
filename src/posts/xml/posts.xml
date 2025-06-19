@@ -6,4 +6,11 @@
         <date>2025-06-19</date>
         <image>hamburger.jpg</image>
     </post>
+    <post>
+        <title>This is the Second Post</title>
+        <subtitle></subtitle>
+        <body></body>
+        <date></date>
+        <image></image>
+    </post>
 </posts>
