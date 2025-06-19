@@ -150,7 +150,7 @@ footer {
 }
 
 .thread-card {
-    width: 100%;
+    width: 80%;
     max-width: 800px;
     background: #fafbfc;
     border-radius: 12px;
@@ -200,7 +200,6 @@ main {
     }
     .thread-card {
         margin: 100px 0;
-        max-width: 500px;
     }
     .about.thread-card {
         margin: 100px 0;
