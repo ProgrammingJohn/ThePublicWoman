@@ -78,6 +78,10 @@ body {
     padding: 18px 28px 18px 18px;
     font-family: 'Monospace', 'Arial', sans-serif;
     z-index: 3;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    white-space: normal;
+    box-sizing: border-box;
 }
 
 .post-bottom-right {
@@ -179,6 +183,8 @@ footer {
     padding: 6px 0 12px 0;
     text-align: center;
     z-index: 1000;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 }
 
 #scroll-arrow {
@@ -239,8 +245,9 @@ footer {
         flex-direction: row;
         box-shadow: none;
         z-index: 100;
-        background: none;
         border: none;
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
     }
     .navbar ul {
         display: flex;
@@ -268,6 +275,7 @@ footer {
         background: none;
     }
 }
+
 p {
     font-size: small;
 }
