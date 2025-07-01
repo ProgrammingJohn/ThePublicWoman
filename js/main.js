@@ -70,9 +70,9 @@ document.addEventListener('DOMContentLoaded', function() {
         let lastScroll = 0;
         window.addEventListener('wheel', function(e) {
             if (isTransitioning) return;
-            if (e.deltaY > 40) {
+            if (e.deltaY > 70) {
                 showNextSlide();
-            } else if (e.deltaY < -40) {
+            } else if (e.deltaY < -70) {
                 showPrevSlide();
             }
         }, { passive: false });
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (touchStartY === null) return;
             let touchEndY = e.changedTouches[0].clientY;
             let diff = touchStartY - touchEndY;
-            if (Math.abs(diff) > 40) {
+            if (Math.abs(diff) > 70) {
                 if (diff > 0) showNextSlide();
                 else showPrevSlide();
             }

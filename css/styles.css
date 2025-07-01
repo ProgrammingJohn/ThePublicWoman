@@ -7,7 +7,6 @@ html, body {
     height: 100%;
     min-height: 100vh;
     overflow-x: hidden;
-    overscroll-behavior-x: none;
 }
 
 body {
@@ -32,7 +31,6 @@ body {
     position: relative;
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
 }
 
 .post-slide {
@@ -46,7 +44,6 @@ body {
     display: flex;
     flex-direction: column;
     z-index: 1;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.07);
 }
 
 .post-slide.active {
@@ -82,6 +79,10 @@ body {
     word-break: break-word;
     white-space: normal;
     box-sizing: border-box;
+    overflow: auto;
+    scrollbar-width: thin;
+    max-height: 60vh;
+    border-radius: 12px;
 }
 
 .post-bottom-right {
@@ -95,6 +96,23 @@ body {
     font-family: 'Monospace', 'Arial', sans-serif;
     z-index: 3;
     text-align: right;
+    overflow: auto;
+    scrollbar-width: thin;
+    max-height: 40vh;
+    border-radius: 12px;
+}
+
+/* Custom scrollbar for Webkit browsers */
+.post-bottom-left::-webkit-scrollbar,
+.post-bottom-right::-webkit-scrollbar {
+    width: 6px;
+    background: #e9e2d0;
+    border-radius: 8px;
+}
+.post-bottom-left::-webkit-scrollbar-thumb,
+.post-bottom-right::-webkit-scrollbar-thumb {
+    background: #a97c50;
+    border-radius: 8px;
 }
 
 .navbar {
@@ -105,12 +123,14 @@ body {
     flex-direction: column;
     width: 120px;
     background: none;
-    border-radius: 0;
+    border-radius: 15px;
     border: none;
     box-shadow: none;
     overflow: visible;
     padding: 0;
     z-index: 20;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 }
 
 .navbar,
@@ -284,12 +304,13 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 120px;
+    margin-top: 80px;
     margin-bottom: 60px;
 }
 
 .about-pfp {
     width: auto;
+    height: 40vh;
     object-fit: cover;
     margin-bottom: 32px;
     box-shadow: #111 0px 0px 50px;
@@ -301,7 +322,6 @@ p {
     margin-inline: 20px;
     text-align: left;
     color: #222;
-    
 }
 
 .about-card h1 {
